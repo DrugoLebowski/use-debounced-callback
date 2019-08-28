@@ -1,6 +1,6 @@
 {
   "name": "use-debounced-callback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The debounced version of useCallback.",
   "main": "index.js",
   "repository": "https://github.com/DrugoLebowski/use-debounced-callback",
