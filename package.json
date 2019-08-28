@@ -1,0 +1,21 @@
+{
+  "name": "use-debounced-callback",
+  "version": "1.0.0",
+  "description": "The debounced version of useCallback.",
+  "main": "index.js",
+  "repository": "https://github.com/DrugoLebowski/use-debounced-callback",
+  "author": "Valerio Belli <belli.valerio@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.9.2",
+    "react": "^16.9.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.19.0",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc --build ./tools/tsconfig.json",
+    "clean": "rm -rf dist"
+  }
+}
