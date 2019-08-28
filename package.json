@@ -21,10 +21,10 @@
     "typescript": "^3.5.3"
   },
   "scripts": {
-    "build": "yarn clean || true && yarn copy-files && ./node_modules/.bin/tsc --build ./tsconfig.json",
+    "build": "yarn clean && yarn copy-files && ./node_modules/.bin/tsc --build ./tsconfig.json",
     "clean": "rm -rf lib",
-    "copy-files": "mkdir lib || true && cp .gitignore .prettierrc package.json Readme.md tsconfig.json tslint.json lib",
-    "npm-publish": "yarn build && cd lib && npm public && cd ..",
+    "copy-files": "mkdir lib && cp .gitignore .prettierrc package.json Readme.md tslint.json lib",
+    "npm-publish": "yarn build && cd lib && npm publish && cd ..",
     "test": "./node_modules/.bin/jest --env=jsdom"
   },
   "jest": {

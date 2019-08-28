@@ -12,15 +12,17 @@
     "noImplicitAny": true,
     "outDir": "./lib",
     "strict": true,
+    "rootDir": "./src",
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "target": "es5",
   },
   "include": [
-    "src/**/*",
+    "./src/**/*",
   ],
   "exclude": [
     "node_modules",
-    "__tests__",
+    "**/__tests__",
+    "**/__mocks__"
   ],
 }
