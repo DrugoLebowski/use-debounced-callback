@@ -1,8 +1,18 @@
 useDebouncedCallback
 ====================
 
-Usage example
--------------
+Install
+-------
+With npm
+
+`npm i use-debounced-callback`
+
+With Yarn
+
+`yarn add use-debounced-callback`
+
+Usage
+-----
 
 ```javascript
 import React, { useState } from "react";
