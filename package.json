@@ -24,7 +24,7 @@
     "build": "yarn clean || true && yarn copy-files && ./node_modules/.bin/tsc --build ./tsconfig.json",
     "clean": "rm -rf lib",
     "copy-files": "mkdir lib || true && cp .gitignore .prettierrc package.json Readme.md tsconfig.json tslint.json lib",
-    "npm-public": "yarn build && cd lib && npm public && cd ..",
+    "npm-publish": "yarn build && cd lib && npm public && cd ..",
     "test": "./node_modules/.bin/jest --env=jsdom"
   },
   "jest": {
