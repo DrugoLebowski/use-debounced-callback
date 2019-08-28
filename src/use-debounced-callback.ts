@@ -29,7 +29,7 @@ function useDebouncedCallback(
         memoizedCallback(e);
       }
 
-      timeoutId.current = setTimeout(() => {
+      timeoutId.current = window.setTimeout(() => {
         callbackAlreadyCalled.current = false;
       }, millisecondsOffset);
     },
