@@ -1,11 +1,24 @@
 useDebouncedCallback
 ====================
 
-Usage
+Usage example
 -----
 
 ```javascript
-const debouncedCallback = useDebouncedCallback(() => {
-  console.log("Hello, World!");
-}, 250);
+import React, { useState } from "react";
+import { useDebouncedCallback } from "use-debounced-callback";
+
+const FuncComp = () => {
+  const [ text, setText, ] = useState("");
+  const debouncedCallback = useDebouncedCallback((e) => {
+    setText(e.target.value);
+  }, 250);
+
+  return (
+    <div>
+      <input @input={debouncedCallback} />
+      {text}
+    </div>
+  );
+}
 ```
