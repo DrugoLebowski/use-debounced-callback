@@ -16,7 +16,7 @@ const FuncComp = () => {
 
   return (
     <div>
-      <input @input={debouncedCallback} />
+      <input onChange={debouncedCallback} />
       {text}
     </div>
   );
