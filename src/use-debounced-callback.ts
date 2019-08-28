@@ -1,5 +1,5 @@
 // Vendor
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 /**
  * Debounce the `callback` execution until the difference between the current time
@@ -21,20 +21,28 @@ function useDebouncedCallback(
     callback(e);
   }, []);
 
-  return useCallback(
+  const debouncedCallback = useCallback(
     (e: any) => {
       if (callbackAlreadyCalled.current) {
-        clearInterval(timeoutId.current);
-
-        timeoutId.current = window.setTimeout(() => {
-          callbackAlreadyCalled.current = false;
-        }, millisecondsOffset);
+        clearTimeout(timeoutId.current);
       } else {
         memoizedCallback(e);
       }
+
+      timeoutId.current = setTimeout(() => {
+        callbackAlreadyCalled.current = false;
+      }, millisecondsOffset);
     },
     [millisecondsOffset],
   );
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutId.current);
+    };
+  }, [millisecondsOffset]);
+
+  return debouncedCallback;
 }
 
 export default useDebouncedCallback;

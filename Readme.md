@@ -2,7 +2,7 @@ useDebouncedCallback
 ====================
 
 Usage example
------
+-------------
 
 ```javascript
 import React, { useState } from "react";
